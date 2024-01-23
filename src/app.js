@@ -27,7 +27,7 @@ require("./dbs/init.mongodb")
 // checkOverload()
 
 //init routes
-app.use('/', require('./routes'))
+app.use('/', require('./routes/shop'))
 //handling error
 
 
