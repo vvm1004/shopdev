@@ -16,10 +16,10 @@ class KeyTokenService {
 
             //level xxx
             const filter = { user: userId }, updates = {
-                publicKey, privateKey, refreshTokensUsed: [], refreshToken
+                publicKey, privateKey, refreshTokensUsed: [], refreshToken,
             }, options = { upsert: true, new: true }
 
-            const tokens = await keytokenModel.findOneAndUpdate(filter, update, options)
+            const tokens = await keytokenModel.findOneAndUpdate(filter, updates, options)
             return tokens ? tokens.publicKey : null
 
         } catch (error) {
