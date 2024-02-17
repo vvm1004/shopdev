@@ -11,8 +11,8 @@ router.use(apiKey)
 //check permission
 router.use(permisson('0000'))
 
-router.use('/v1/api', require('../access'))
 router.use('/v1/api/product', require('../product'))
+router.use('/v1/api', require('../access'))
 
 
 module.exports = router
