@@ -197,7 +197,7 @@ class DiscountService {
             }, 0)
 
             if (totalOrder < discount_min_order_value) {
-                throw new NotFoundError(`Discount requires a minium order values of ${discount_min_order_value}!`)
+                // throw new NotFoundError(`Discount requires a minium order values of ${discount_min_order_value}!`)
             }
         }
         if (discount_max_uses_per_user > 0) {

@@ -20,7 +20,9 @@
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "mongoose": "^8.0.4",
-    "slugify": "^1.6.6"
+    "redis": "^4.6.13",
+    "slugify": "^1.6.6",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

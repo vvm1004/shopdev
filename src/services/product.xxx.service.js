@@ -65,14 +65,14 @@ class ProductFactory {
 class Product {
     constructor({
         product_name, product_thumb, product_description,
-        product_price, procduct_quantity, product_type,
+        product_price, product_quantity, product_type,
         product_shop, product_attributes
     }) {
         this.product_name = product_name
         this.product_thumb = product_thumb
         this.product_description = product_description
         this.product_price = product_price
-        this.procduct_quantity = procduct_quantity
+        this.product_quantity = product_quantity
         this.product_type = product_type
         this.product_shop = product_shop
         this.product_attributes = product_attributes
@@ -86,7 +86,7 @@ class Product {
             await insertInventory({
                 productId: newProduct._id,
                 shopId: this.product_shop,
-                stock: this.procduct_quantity 
+                stock: this.product_quantity 
             })
         }
         return newProduct
