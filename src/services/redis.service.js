@@ -8,7 +8,7 @@ const acquireLock = async (productId, quantity, cartId) => {
   const expireTime = 3000; //3 seconds temporary lock
 
   for (let i = 0; i < retryTimes.length; i++) {
-    const result = await c.setnxAsync(key, expireTime);
+    const result = await redisClient.setnxAsync(key, expireTime);
     console.log(`result:::`, result);
     if (result === 1) {
       const isReservation = await reservationInventory({
